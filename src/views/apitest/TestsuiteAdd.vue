@@ -135,7 +135,8 @@
             getProjectNames() {
                 projects_names()
                 .then((response)=> {
-                    this.project_names = response.data;
+                    this.project_names = response;
+                    // this.project_names = response.data;
                 })
                 .catch(error => {
                     that.$message.error('服务器错误');
@@ -148,7 +149,8 @@
             getInterfacesByProjectID(pro_id){
                 interfaces_by_project_id(pro_id)
                 .then((response)=> {
-                    this.unselected = response.data;
+                    this.unselected = response;
+                    // this.unselected = response.data;
                 })
                 .catch(error => {
                     that.$message.error('服务器错误');

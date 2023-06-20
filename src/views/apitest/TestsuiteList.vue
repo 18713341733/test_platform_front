@@ -270,7 +270,8 @@
             getEnvsIdNames(){
                 envs_names()
                 .then(response => {
-                    this.envs_id_names = response.data;   // 将返回的环境变量数据赋值给envs_id_names
+                    this.envs_id_names = response;   // 将返回的环境变量数据赋值给envs_id_names
+                    // this.envs_id_names = response.data;
                 })
                 .catch(error => {
                     this.$message.error('服务器错误');
@@ -280,7 +281,8 @@
                 run_by_testsuite(this.id, this.env_id)
                 .then(response => {
                     // console.log(response.data);   // 通过套件运行用例
-                    this.$router.push({ path: `/reports_view/${response.data.id}` })
+                    this.$router.push({ path: `/reports_view/${response.id}` })
+                    // this.$router.push({ path: `/reports_view/${response.data.id}` })
                 })
                 .catch(error => {
                     // console.log(error);

@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="crumbs">
+<!--        <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item><i class="el-icon-lx-calendar"></i> 套件管理</el-breadcrumb-item>
                 <el-breadcrumb-item>编辑套件</el-breadcrumb-item>
             </el-breadcrumb>
-        </div>
+        </div> -->
         <div class="container">
             <div class="form-box">
                 <el-form ref="form" :rules="rules" :model="form" label-width="100px">
