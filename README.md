@@ -5,12 +5,13 @@
 
 后端地址：
 
+https://github.com/18713341733/test_platform_service
 
-GitHub - 18713341733/test_platform_service: django vue 实现接口自动化平台
+
 
 前端地址：
 
-GitHub - 18713341733/test_platform_front: Django vue实现接口自动化平台
+https://github.com/18713341733/test_platform_front
 
 ## 1.2  项目介绍
 ### 1.2.1 环境准备
