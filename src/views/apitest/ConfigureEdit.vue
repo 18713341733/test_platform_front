@@ -321,7 +321,8 @@
             getProjectNames() {
                 projects_names()
                     .then((response) => {
-                        this.project_names = response.data;
+                        this.project_names = response;
+                        // this.project_names = response.data;
                     })
                     .catch(error => {
                         that.$message.error('服务器错误');
@@ -331,7 +332,8 @@
                 interfaces_by_project_id(pro_id)
                     .then((response) => {
                         this.selected_interface_id = null;
-                        this.interfaces = response.data;
+                        this.interfaces = response;
+                        // this.interfaces = response.data;
                     })
                     .catch(error => {
                         that.$message.error('服务器错误');
@@ -400,13 +402,21 @@
             getConfigureDetail(){
                 get_detail_configure(this.current_configure_id)
                     .then(response => {
-                        this.configure_name = response.data.configure_name;
-                        this.author = response.data.author;
-                        this.selected_project_id = response.data.selected_project_id;
+                        this.configure_name = response.configure_name;
+                        this.author = response.author;
+                        this.selected_project_id = response.selected_project_id;
                         this.getInterfacesByProjectID(this.selected_project_id);
-                        this.selected_interface_id = response.data.selected_interface_id;
-                        this.apiMsgData.globalVar = response.data.globalVar;
-                        this.apiMsgData.header = response.data.header;
+                        this.selected_interface_id = response.selected_interface_id;
+                        this.apiMsgData.globalVar = response.globalVar;
+                        this.apiMsgData.header = response.header;
+
+                        // this.configure_name = response.data.configure_name;
+                        // this.author = response.data.author;
+                        // this.selected_project_id = response.data.selected_project_id;
+                        // this.getInterfacesByProjectID(this.selected_project_id);
+                        // this.selected_interface_id = response.data.selected_interface_id;
+                        // this.apiMsgData.globalVar = response.data.globalVar;
+                        // this.apiMsgData.header = response.data.header;
                     })
                     .catch(error => {
                         this.$message.error('服务器错误');
