@@ -187,9 +187,10 @@
             getTestSuiteDetail(){
                 get_detail_testsuite(this.current_testsuite_id)
                     .then(response => {
+                      
                         this.form.name = response.name;
                         // this.form.name = response.data.name;
-                        this.form.project_id = response.id;
+                        this.form.project_id = response.project_id;
                         // this.form.project_id = response.data.project_id;
                         this.getInterfacesByProjectID(this.form.project_id);
                         this.form.include = response.include;
